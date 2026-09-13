@@ -1,0 +1,207 @@
+{
+  "revenue": [
+    {
+      "id": "1",
+      "month": "Jan",
+      "revenue": 12000
+    },
+    {
+      "id": "2",
+      "month": "Feb",
+      "revenue": 15000
+    },
+    {
+      "id": "3",
+      "month": "Mar",
+      "revenue": 18000
+    },
+    {
+      "id": "4",
+      "month": "Apr",
+      "revenue": 16500
+    },
+    {
+      "id": "5",
+      "month": "May",
+      "revenue": 22000
+    },
+    {
+      "id": "6",
+      "month": "Jun",
+      "revenue": 25000
+    }
+  ],
+  "categorySales": [
+    {
+      "id": "1",
+      "category": "Electronics",
+      "sales": 450000
+    },
+    {
+      "id": "2",
+      "category": "Fashion",
+      "sales": 320000
+    },
+    {
+      "id": "3",
+      "category": "Home",
+      "sales": 180000
+    },
+    {
+      "id": "4",
+      "category": "Sports",
+      "sales": 120000
+    }
+  ],
+  "orderStatus": [
+    {
+      "id": "1",
+      "status": "Completed",
+      "value": 72
+    },
+    {
+      "id": "2",
+      "status": "Pending",
+      "value": 15
+    },
+    {
+      "id": "3",
+      "status": "Cancelled",
+      "value": 8
+    },
+    {
+      "id": "4",
+      "status": "Returned",
+      "value": 5
+    }
+  ],
+  "topProducts": [
+    {
+      "id": "1",
+      "product": "iPhone 15",
+      "sales": 125000
+    },
+    {
+      "id": "2",
+      "product": "Nike Air Max",
+      "sales": 98000
+    },
+    {
+      "id": "3",
+      "product": "Samsung TV",
+      "sales": 87000
+    },
+    {
+      "id": "4",
+      "product": "MacBook Air",
+      "sales": 76000
+    },
+    {
+      "id": "5",
+      "product": "Adidas Shoes",
+      "sales": 65000
+    }
+  ],
+  "customerGrowth": [
+    {
+      "id": "1",
+      "month": "Jan",
+      "customers": 8200
+    },
+    {
+      "id": "2",
+      "month": "Feb",
+      "customers": 8700
+    },
+    {
+      "id": "3",
+      "month": "Mar",
+      "customers": 9300
+    },
+    {
+      "id": "4",
+      "month": "Apr",
+      "customers": 10100
+    },
+    {
+      "id": "5",
+      "month": "May",
+      "customers": 11200
+    },
+    {
+      "id": "6",
+      "month": "Jun",
+      "customers": 12540
+    }
+  ],
+  "products": [
+    {
+      "id": "2",
+      "name": "Nike Air Max",
+      "category": "Fashion",
+      "price": 12999,
+      "stock": 4
+    },
+    {
+      "id": "3",
+      "name": "Samsung TV",
+      "category": "Electronics",
+      "price": 54999,
+      "stock": 7
+    },
+    {
+      "id": "4",
+      "name": "MacBook Air",
+      "category": "Electronics",
+      "price": 99999,
+      "stock": 2
+    },
+    {
+      "id": "5",
+      "name": "Adidas Shoes",
+      "category": "Fashion",
+      "price": 8999,
+      "stock": 18
+    },
+    {
+      "name": "iPhone 17",
+      "category": "Electronics",
+      "price": 99999,
+      "stock": 20,
+      "id": "JCr2IgSvfdc"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "customer": "John Doe",
+      "total": 79999
+    },
+    {
+      "id": "2",
+      "customer": "Sarah Smith",
+      "total": 12999
+    },
+    {
+      "id": "3",
+      "customer": "Mike Johnson",
+      "total": 54999
+    },
+    {
+      "id": "4",
+      "customer": "David Brown",
+      "total": 99999
+    },
+    {
+      "id": "5",
+      "customer": "Emma Wilson",
+      "total": 8999
+    },
+    {
+      "id": "6",
+      "customer": "Alex Thomas",
+      "total": 7499
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
