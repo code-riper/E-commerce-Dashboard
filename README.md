@@ -4,7 +4,7 @@ A responsive and modern **E-Commerce Admin Dashboard** built with React.js. The 
 
 ## 🚀 Live Demo
 
-[**Live Demo:**](https://e-commerce-dashboard-6d70dc.netlify.app/)
+[**Live Demo**:(https://e-commerce-dashboard-6d70dc.netlify.app/)]
 
 ## 📌 Features
 
