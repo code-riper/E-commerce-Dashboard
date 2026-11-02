@@ -9,8 +9,7 @@ export default function UserTable({users,onEditUser,onDeleteUser,onStatusChange,
     const[currentPage,setCurrentPage]=useState(1);
     const usersPerPage=5;
 
-    
-    
+
     const filteredUsers=users.filter((user)=>{
     const matchesSearch= 
     (user.name.toLowerCase().includes(search.toLowerCase())) || user.email.toLowerCase().includes(search.toLowerCase())
@@ -38,7 +37,8 @@ export default function UserTable({users,onEditUser,onDeleteUser,onStatusChange,
         <div className="row g-3 mb-3">
 
         <div className="col-12 col-md-8">
-            <input type="text" className="form-control mb-3" placeholder="Search users..." value={search} onChange={(e)=>setSearch(e.target.value)}/>
+            <input type="text" className="form-control mb-3" placeholder="Search users..." value={search} 
+            onChange={(e)=>setSearch(e.target.value)}/>
         </div>
 
         <div className="col-12 col-md-4">                        

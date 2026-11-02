@@ -41,13 +41,7 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
         <div className="row g-3 mb-3">
 
           <div className="col-12 col-md-8">  
-        <input
-        type="text"
-        className="form-control "
-        placeholder="Search products..."
-        value={search}
-        onChange={(e)=>setSearch(e.target.value)}
-        />
+        <input type="text" className="form-control" placeholder="Search products..." value={search} onChange={(e)=>setSearch(e.target.value)}/>
           </div>
 
           <div className="col-12 col-md-4">
@@ -100,10 +94,7 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
                             />
                         </TableCell>
                         <TableCell>
-                            <button type="button"
-                             className="btn btn-outline-primary btn-sm"
-                             onClick={()=>onEditProduct(product)}
-                            >
+                            <button type="button" className="btn btn-outline-primary btn-sm" onClick={()=>onEditProduct(product)}>
                                 Edit
                             </button>
                         </TableCell>

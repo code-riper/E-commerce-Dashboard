@@ -39,6 +39,8 @@ export default function ProductForm({ onAddProduct,selectedProduct,onEditProduct
             setStock(selectedProduct.stock);
         }
     },[selectedProduct])
+
+    
 console.log("Selected Product:", selectedProduct);
 console.log(
   "Edit Mode:",
@@ -49,19 +51,13 @@ console.log(
          <div className="col-12 col-md-6">
             <label className="form-label">Product Name</label>
 
-            <input type="text"
-            className="form-control"
-            value={name}
-            onChange={(e)=>setName(e.target.value)}
-            />
+            <input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)} />
          </div>
 
          <div className="col-12 col-md-6">
             <label htmlFor="" className="form-label">Category</label>
 
-            <select className="form-select"
-            value={category}
-            onChange={(e)=>setCategory(e.target.value)}>
+            <select className="form-select" value={category} onChange={(e)=>setCategory(e.target.value)}>
 
                 <option value="Electronics">Electronics</option>
                 <option value="Fashion">Fashion</option>
@@ -74,22 +70,13 @@ console.log(
          <div className="col-12 col-md-6">
             <label className="form-label">Price</label>
 
-            <input type="number"
-            className="form-control"
-            value={price}
-            onChange={(e)=>setPrice(e.target.value)}
-            />
+            <input type="number" className="form-control" value={price} onChange={(e)=>setPrice(e.target.value)} />
          </div>
 
          <div className="col-12 col-md-6">
              <label className="form-label">Stock</label>
 
-             <input
-               type="number"
-               className="form-control"
-               value={stock}
-               onChange={(e) => setStock(e.target.value)}
-             />
+             <input type="number" className="form-control" value={stock} onChange={(e) => setStock(e.target.value)}/>
         </div>
 
         <div className="col-12">
