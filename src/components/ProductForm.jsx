@@ -79,7 +79,7 @@ console.log(
              <input type="number" className="form-control" value={stock} onChange={(e) => setStock(e.target.value)}/>
         </div>
 
-        <div className="col-12">
+        <div className="col-12 col-md-4 col-lg-3">
             <button type="submit" className="btn btn-primary w-100 ">
             {selectedProduct ? "Update Product" : "Add Product "}</button>
         </div>

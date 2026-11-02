@@ -25,6 +25,8 @@ import axios from "axios";
 import ProductTable from "./components/ProductTable";
 import ProductForm from "./components/ProductForm";
 
+import api from "../src/services/api"
+
 
 export default function App() {
   // STATE
@@ -245,7 +247,7 @@ export default function App() {
     setOrdersLoading(true);
     setOrdersError(null);
     try {
-      const response = await axios.get( "http://localhost:3000/orders" );
+      const response = await api.get( "/orders" );
       setOrders(response.data);
     } catch (error) {
       console.log("Failed to load orders");
@@ -267,7 +269,7 @@ export default function App() {
     setRevenueLoading(true);
     setRevenueError(null);
     try {
-      const response = await axios.get( "http://localhost:3000/revenue" );
+      const response = await api.get( "/revenue" );
       setRevenueData(response.data);
     } catch (error) {
       setRevenueError("Failed to load revenue data");
@@ -286,7 +288,7 @@ export default function App() {
     setCategoryLoading(true);
     setCategoryError(null);
     try {
-      const response = await axios.get( "http://localhost:3000/categorySales" );
+      const response = await api.get( "/categorySales" );
       setCategoryData(response.data);
     } catch (error) {
       setCategoryError("Failed to load category sales");
@@ -300,7 +302,7 @@ export default function App() {
     setOrderStatusLoading(true);
     setOrderStatusError(null);
     try {
-      const response = await axios.get("http://localhost:3000/orderStatus");
+      const response = await api.get("/orderStatus");
       // console.log(response.data);
       setOrderStatusData(response.data);
     } catch (error) {
@@ -315,7 +317,7 @@ export default function App() {
     setTopProductsLoading(true);
     setTopProductsError(null);
     try {
-      const response = await axios.get("http://localhost:3000/topProducts");
+      const response = await api.get("/topProducts");
       console.log("Top Products:", response.data);
       setTopProductsData(response.data);
     } catch (error) {
@@ -330,7 +332,7 @@ export default function App() {
     setCustomerGrowthLoading(true); 
     setCustomerGrowthError(null); 
     try { 
-      const response = await axios.get("http://localhost:3000/customerGrowth"); 
+      const response = await api.get("/customerGrowth"); 
       setCustomerGrowthData(response.data); 
     } catch (error) { 
       setCustomerGrowthError("Failed to load customer growth"); 
@@ -344,7 +346,7 @@ const fetchProducts = async () => {
   setProductsLoading(true);
   setProductsError(null);
   try {
-    const response = await axios.get("http://localhost:3000/products");
+    const response = await api.get("/products");
     // console.log("Products:", response.data);
     setProducts(response.data);
   } catch (error) {
@@ -367,7 +369,7 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
   const handleAddProduct = async (product) => {
     setAddProductLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/products",product);
+      const response = await api.post("/products",product);
       setProducts((prevProducts) => [
         ...prevProducts,
         response.data
@@ -387,7 +389,7 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
 
   const handleEditProduct = async (updatedProduct) => {
     try {
-      const response = await axios.put("http://localhost:3000/products/" +updatedProduct.id,updatedProduct);
+      const response = await api.put("/products/" +updatedProduct.id,updatedProduct);
       setProducts((prevProducts) => {
         return prevProducts.map((product) => {
           if (product.id === updatedProduct.id) {
@@ -406,7 +408,7 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
   const handleDeleteProduct = async (productId) => {
     setDeleteProductLoading(true);
     try {
-      await axios.delete("http://localhost:3000/products/" +productId);
+      await api.delete("/products/" +productId);
       setProducts((prevProducts) => {
         return prevProducts.filter((product) => {
           return product.id != productId;
