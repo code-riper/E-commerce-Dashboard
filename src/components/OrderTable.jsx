@@ -45,7 +45,11 @@ function OrderTable(){
                                     <Chip 
                                         label={order.status}
                                         color={order.status==="Completed"?"success":"warning"}
-                                        size="small"
+                                        size="medium"
+                                        sx={{
+                                            fontSize:"16px",
+                                            fontWeight:550
+                                        }}
                                     />
                                      </TableCell>
                                  </TableRow>

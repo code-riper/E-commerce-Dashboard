@@ -28,7 +28,7 @@ export default function StatCard({title,value,icon,iconBg,change,comparison}){
                     {title}
                 </Typography> */}
 
-                <Typography variant="h4" sx={{fontWeight:600,marginBottom:1}}>
+                <Typography variant="p" sx={{fontWeight:"bold",marginBottom:1,fontSize:"35px"}}>
                     {value}
                 </Typography>
 

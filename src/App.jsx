@@ -514,19 +514,21 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
         <div className="row">
 
           <div className="dashboard-body col-12 col-md-3">
-            <Sidebar />
+            <aside>
+              <Sidebar />
+            </aside>
           </div>
 
-
-          <div className="col-12 col-md-9 p-md-4 p-3">
-          <div className="mb-4">
+        
+          <main className="col-12 col-md-9 p-md-4 p-3">
+          <header className="mb-4">
             <DashboardHeader
               onAddUser={handleAddUser}
               selectedUser={selectedUser}
               onEditUser={handleEditUser}
               onClearSelectedUser={handleClearSelectedUser}
               loading={addUserLoading} />
-          </div>
+          </header>
 
             {/* FILTERS */}
 
@@ -535,9 +537,9 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
               <div className="w-100 ">                                         
               <FormControl size="small" sx={{ minWidth: 160 , width:{ xs:"100%",md:"auto"}}}>
 
-                <InputLabel> Date Range </InputLabel>
+                <InputLabel htmlFor="dateRnge"> Date Range </InputLabel>
 
-                <Select value={dateRange} label="Date Range" onChange={(e) =>   setDateRange(e.target.value)} >
+                <Select value={dateRange} id="dateRnge" label="Date Range" onChange={(e) => setDateRange(e.target.value)} >
                   <MenuItem value="Today"> Today </MenuItem>
                   <MenuItem value="Yesterday"> Yesterday </MenuItem>
                   <MenuItem value="Last 7 Days"> Last 7 Days </MenuItem>
@@ -552,10 +554,10 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
               
               <FormControl size="small" sx={{ minWidth: 160, width:{ xs:"100%",md:"auto"} }}>
 
-                <InputLabel>Category</InputLabel>
+                <InputLabel htmlFor="category">Category</InputLabel>
 
 
-                <Select value={category} label="Category" onChange={(e) =>   setCategory(e.target.value) }>
+                <Select value={category} id="category" label="Category" onChange={(e) =>   setCategory(e.target.value) }>
                   <MenuItem value="All Categories"> All Categories </MenuItem>
                   <MenuItem value="Electronics"> Electronics  </MenuItem>
                   <MenuItem value="Fashion"> Fashion </MenuItem>
@@ -913,9 +915,11 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </main>
         </div>
       </div>
+      
+      
 
           {/* USER DELETE DIALOG */}
 
@@ -964,6 +968,8 @@ const lowStockProducts = products.filter((product) => product.stock < 5);
           </Button>
         </DialogActions>
       </Dialog>
+      
+      
     </Fragment>
   );
 }

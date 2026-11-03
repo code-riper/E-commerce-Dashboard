@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function ProductForm({ onAddProduct,selectedProduct,onEditProduct }){
 
     const [name, setName]=useState("");
-    const [category, setCategory]=useState("Electronics");
+    const [category, setCategory]=useState("");
     const [price, setPrice]=useState("");
     const [stock, setStock]=useState("");
 
@@ -49,16 +49,16 @@ console.log(
     return(
         <form onSubmit={handleSubmit} className="row g-3">
          <div className="col-12 col-md-6">
-            <label className="form-label">Product Name</label>
+            <label className="form-label" htmlFor="productName">Product Name</label>
 
-            <input type="text" className="form-control" value={name} onChange={(e)=>setName(e.target.value)} />
+            <input type="text" id="productName" name="productName" className="form-control" value={name} onChange={(e)=>setName(e.target.value)} />
          </div>
 
          <div className="col-12 col-md-6">
-            <label htmlFor="" className="form-label">Category</label>
+            <label htmlFor="category" className="form-label">Category</label>
 
-            <select className="form-select" value={category} onChange={(e)=>setCategory(e.target.value)}>
-
+            <select className="form-select" id="category" name="category" value={category} onChange={(e)=>setCategory(e.target.value)}>
+                <option value="">Select a category</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Fashion">Fashion</option>
                 <option value="Home">Home</option>
@@ -68,15 +68,15 @@ console.log(
          </div>
 
          <div className="col-12 col-md-6">
-            <label className="form-label">Price</label>
+            <label className="form-label" htmlFor="price">Price</label>
 
-            <input type="number" className="form-control" value={price} onChange={(e)=>setPrice(e.target.value)} />
+            <input type="number" className="form-control" id="price" name="price" value={price} onChange={(e)=>setPrice(e.target.value)} />
          </div>
 
          <div className="col-12 col-md-6">
-             <label className="form-label">Stock</label>
+             <label className="form-label" htmlFor="productStock">Stock</label>
 
-             <input type="number" className="form-control" value={stock} onChange={(e) => setStock(e.target.value)}/>
+             <input type="number" className="form-control" id="productStock" name="productStock" value={stock} onChange={(e) => setStock(e.target.value)}/>
         </div>
 
         <div className="col-12 col-md-4 col-lg-3">

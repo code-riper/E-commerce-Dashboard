@@ -1,8 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
 import { Fragment, useEffect, useState } from "react";
 
-
-
 export default function DashboardHeader({onAddUser,selectedUser,onEditUser,onClearSelectedUser,loading}){
     const [open, setOpen]=useState(false);
     const [name,setName]=useState("");
@@ -41,10 +39,6 @@ export default function DashboardHeader({onAddUser,selectedUser,onEditUser,onCle
                 email:email,
             });
 
-            // setName("");
-            // setEmail("");
-            // setErrors({})
-            // setOpen(false);
         }
             setName("");
             setEmail("");
@@ -104,7 +98,6 @@ export default function DashboardHeader({onAddUser,selectedUser,onEditUser,onCle
 
             <DialogActions>
 
-                {/* <Button onClick={()=>setOpen(false)}>Cancel</Button> */}
                 <Button onClick={handleCancel}>Cancel</Button>
                 <Button variant="contained" onClick={handleSave}>{selectedUser ? "Update" : "Save"}</Button>
             </DialogActions>
