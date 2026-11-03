@@ -13,8 +13,7 @@ function Navbar(){
             data-bs-target="#navbarContent"
             aria-controls="navbarContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-            >
+            aria-label="Toggle navigation" >
                 <span className="navbar-toggler-icon"></span>
 
             </button>

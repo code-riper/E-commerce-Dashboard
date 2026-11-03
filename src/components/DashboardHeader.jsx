@@ -75,10 +75,7 @@ export default function DashboardHeader({onAddUser,selectedUser,onEditUser,onCle
                 <p className="text-muted mb-0">Welcome back!</p>
             </div>
 
-            <Button variant="contained" 
-            onClick={()=>setOpen(true)}
-            disabled={loading}
-            >
+            <Button variant="contained"  onClick={()=>setOpen(true)} disabled={loading} >
                 {loading?"Adding...":"+ Add User"}
             </Button>
         </div>
@@ -92,8 +89,7 @@ export default function DashboardHeader({onAddUser,selectedUser,onEditUser,onCle
                 <TextField label="Name" fullWidth margin="normal" value={name}
                  onChange={(e)=>setName(e.target.value)} helperText={errors.name} error={Boolean(errors.name)}></TextField>
                 <TextField label="Email" fullWidth margin="normal" value={email} error={Boolean(errors.email)}
-                onChange={(e)=>setEmail(e.target.value)} helperText={errors.email}
-                ></TextField>
+                onChange={(e)=>setEmail(e.target.value)} helperText={errors.email} ></TextField>
             </DialogContent>
 
             <DialogActions>

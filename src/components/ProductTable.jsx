@@ -41,11 +41,12 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
         <div className="row g-3 mb-3">
 
           <div className="col-12 col-md-8">  
-        <input type="text" className="form-control" placeholder="Search products..." value={search} onChange={(e)=>setSearch(e.target.value)}/>
+        <input type="text" className="form-control" aria-label="Search products by name" placeholder="Search products..." value={search} onChange={(e)=>setSearch(e.target.value)}/>
           </div>
 
           <div className="col-12 col-md-4">
-        <select value={categoryFilter} onChange={(e)=>setCategoryFilter(e.target.value)} className="form-select">
+            <label htmlFor="categoryFilter" className="visually-hidden">Filter products by </label>
+        <select id="categoryFilter" name="categoryFilter" value={categoryFilter} onChange={(e)=>setCategoryFilter(e.target.value)} className="form-select">
           <option value="All">All</option>
           <option value="Electronics">Electronics</option>
           <option value="Fashion">Fashion</option>
@@ -55,7 +56,7 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
         </div>
 
         <TableContainer component={Paper} sx={{overflowX:"auto"}}>
-            <Table stickyHeader>
+            <Table stickyHeader aria-label="Product inventory table">
                 <TableHead>
                     <TableRow>
                         <TableCell>ID</TableCell>
@@ -90,7 +91,8 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
                             <Chip 
                                label={product.stock < 5 ? "Low Stock" : "In Stock"}
                                color={product.stock < 5 ? "error" : "success"}
-                               size="small"
+                               size="medium"
+                               sx={{fontSize:"16px"}}
                             />
                         </TableCell>
                         <TableCell>
@@ -103,7 +105,7 @@ export default function ProductTable({products,onEditProduct, onDeleteProduct,
                             className="btn btn-outline-danger btn-sm"
                             disabled={deleteProductLoading}
                             onClick={()=>onDeleteProduct(product)}
-                            >
+                            aria-label={deleteProductLoading ? `Deleting ${product.name}` : `Delete ${product.name}`}>
                                 {deleteProductLoading ? "Deleting...":"Delete"}
                             </button>
                         </TableCell>
