@@ -23,10 +23,6 @@ export default function StatCard({title,value,icon,iconBg,change,comparison}){
                  <Icon sx={{ fontSize:26 }}/>
                </div>
                </div>
-               
-                {/* <Typography variant="body2" sx={{marginBottom:1,fontWeight:500}}>
-                    {title}
-                </Typography> */}
 
                 <Typography variant="p" sx={{fontWeight:"bold",marginBottom:1,fontSize:"35px"}}>
                     {value}
