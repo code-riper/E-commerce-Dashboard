@@ -64,9 +64,9 @@ The project demonstrates CRUD operations using REST API Integration.
 
 The dashboard follows a **mobile-first approach** using Bootstrap's responsive grid system.
 
-Mobile
-Tablet
-Laptop / Desktop
+* **Mobile**
+* **Tablet**
+* **Laptop / Desktop**
 
 
 The layout automatically adapts to different screen sizes while keeping charts, tables, forms, and dashboard cards usable across devices.
