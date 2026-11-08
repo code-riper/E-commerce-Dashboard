@@ -42,12 +42,12 @@ A responsive and modern **E-Commerce Admin Dashboard** built with React.js. The 
 
 ## 📊 Dashboard Sections
 
-**KPI / Statistics**
-**📈 Analytics**
-**👥 User Management**
-**📦 Product & Inventory Management**
-**🛒 Order Management**
-**🔌 API Integration**
+* **KPI / Statistics**
+* **📈 Analytics**
+* **👥 User Management**
+* **📦 Product & Inventory Management**
+* **🛒 Order Management**
+* **🔌 API Integration**
 
 ## 🔄 CRUD Operations
 
