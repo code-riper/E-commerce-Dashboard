@@ -31,14 +31,14 @@ A responsive and modern **E-Commerce Admin Dashboard** built with React.js. The 
 
 ## 🛠️ Technologies Used
 
-* **React.js**
-* **React Hooks**
-* **Bootstrap 5**
-* **Material UI (MUI)**
-* **MUI X Charts**
-* **Axios**
-* **REST API**
-* **JSON Server**
+**React.js**
+**React Hooks**
+**Bootstrap 5**
+**Material UI (MUI)**
+**MUI X Charts**
+**Axios**
+**REST API**
+**JSON Server**
 
 ## 📊 Dashboard Sections
 
